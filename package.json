@@ -1,0 +1,36 @@
+{
+  "name": "week4",
+  "version": "1.0.0",
+  "description": "week4",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass sass/styles.scss -o css",
+    "autoprefixer": "postcss -u autoprefixer -r css/*",
+    "serve": "browser-sync start --proxy localhost/make-your-vote-up --files css/*.css, js/*.js, *.html, *.php, partials/*.php --browser Chrome",
+    "buildcss": "npm run scss && npm run autoprefixer",
+    "watchcss": "onchange \"sass\" -- npm run buildcss",
+    "watchall": "npm-run-all -p serve watchcss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailiavmd/week4.git"
+  },
+  "author": "avmd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailiavmd/week4.git"
+  },
+  "homepage": "https://github.com/ailiavmd/week4.git#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "browser-sync": "^2.18.7",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.1",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^2.6.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.3.0",
+    "uuid": "^3.0.1"
+  }
+}
