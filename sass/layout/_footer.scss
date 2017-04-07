@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.page-footer {
+    text-align:center;
+    padding:calcRem(50px) calcRem(20px);
+}
+
+@include breakpoint(medium only){
+    .page-footer input {
+        width:100%;
+    }
+}

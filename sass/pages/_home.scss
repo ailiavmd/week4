@@ -1,3 +1,43 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+* {
+    font-family:'open sans', helvetica, sans-serif;
+}
+
+.home {
+    width:100%;
+    height:100vh;
+    box-sizing:border-box;
+    background-size:cover;
+}
+
+.home-banner {
+    height:calcRem(700px);
+    background-image:url("../img/eb.jpg");
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.home-content h2{
+    text-align:right;
+    text-transform:capitalize;
+}
+
+.home-content img {
+    max-width:100%;
+}
+
+@include breakpoint(medium down){
+    .home-banner {
+        height:calcRem(500px);
+        background-position:center;
+    }
+}
+
+@include breakpoint(small only){
+    .home-banner {
+        background-image:url("../img/eb-sm.jpg");
+    }
+}
+

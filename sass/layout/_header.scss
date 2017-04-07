@@ -1,3 +1,75 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+* {
+    //outline:1px solid grey;
+}
+
+.header-nav {
+    padding:calcRem(15px) calcRem(30px);
+    background-color:white;
+}
+
+.header-nav h1 {
+    margin:0;
+    text-transform:uppercase;
+    letter-spacing:calcRem(10px);
+    white-space:nowrap;
+}
+
+.header-nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    text-align:right;
+    font-size:1.5rem;
+}
+
+.header-nav li {
+    display:inline-block;
+    margin:0 calcRem(10px);
+    text-transform:capitalize;
+}
+
+.header-nav a {
+    padding:calcRem(10px);
+    display:block;
+}
+
+.h-menu {
+   
+}
+
+.h-menu i {
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    font-size:2rem;
+    line-height:calcRem(59px);
+}
+
+@include breakpoint(medium down){
+    .header-nav h1{
+        font-size:1.5rem;
+        line-height:3.5rem;
+        letter-spacing:calcRem(5px);
+    }
+}
+
+@include breakpoint(small only){
+    .header-nav {
+        text-align:center;
+        padding:calcRem(10px) calcRem(20px);
+    }
+    .header-nav ul {
+        font-size:1.3rem;
+        text-align:center;
+    }
+    .header-nav li {
+        margin:0 calcRem(12px);
+    }
+    .header-nav a {
+        padding:calcRem(5px);
+    }
+}

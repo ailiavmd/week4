@@ -1,5 +1,10 @@
 @charset 'UTF-8';
 
+//foundation
+@import '../node_modules/foundation-sites/scss/foundation';
+@include foundation-grid;
+@include foundation-visibility-classes;
+
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
@@ -28,7 +33,10 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/works',
+  'pages/contact',
+  'pages/admin';
 
 // 7. Themes
 @import
